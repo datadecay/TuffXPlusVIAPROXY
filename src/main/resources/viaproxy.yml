@@ -1,0 +1,5 @@
+name: "${name}"
+version: "${version}"
+author: "Potato"
+main: "tf.tuff.viaproxy.TuffXPlusViaProxy"
+min-version: "3.3.4"

@@ -1,60 +1,33 @@
-# TuffX+
+# TuffXPlusViaProxy
 
 > [!WARNING]
 > This is not a "crack" for Minecraft, it simply allows for better TuffClient integration on servers.
 
 ![preview](./img/showcase.png)
 
-TuffX+ is a single, unified plugin that combines:
-- TuffX (Below Y0 support for modern world depth)
-- ViaBlocks (custom block palette + chunk updates for modern blocks)
-- ViaEntities (modern entity sync without nametags)
-- TuffActions (swimming sync + creative item handling)
+TuffXPlusViaProxy is a ViaProxy plugin bootstrap for the TuffX+ ecosystem.
 
 ## Requirements
 - Java 17
-- Spigot/Paper 1.18+
-- ViaVersion and ViaBackwards
-
-PacketEvents, Jackson, and WebSocket libraries are shaded into the jar.
+- ViaProxy 3.3.4+
 
 ## Install
 1. Download the latest version from the Releases page.
-2. Drop `TuffXPlus-x.x.x.jar` into your server's `plugins` folder.
-3. Start the server to generate `plugins/TuffX/config.yml`.
-4. Configure features in `config.yml` (`y0`, `registry`, `viablocks`,  `swimming`, `creative-items`, `restrictions`).
-5. Restart or run `/tuffx reload`.
+2. Drop `TuffXPlusViaProxy-x.x.x.jar` into ViaProxy's `plugins` folder.
+3. Start ViaProxy to generate `plugins/TuffXPlusViaProxy/config.yml`.
 
 ## Features
-- Below Y0: sends extra chunk data for Y < 0 so TuffX client can see and interact with modern world depth.
-- ViaBlocks: synchronizes modern block states to TuffX client with a custom palette.
-- ViaEntities: syncs modern entities to TuffX client without nametags.
-- TuffActions: swimming state sync and creative item handling.
-- Restrictions: disallow TuffClient modules: [module list](/docs/restrictions.md)
-- Optional server registry over WebSocket (for discovery).
-
-## Commands
-- `/tuffx reload` - reload the config
-- `/viablocks get` - give a set of custom blocks (creative)
-- `/viablocks refresh` - resend ViaBlocks data in view distance
-- `/restrictions disallow` - add a module to the disallow list and send an update to all TuffClient clients
-- `/restrictions allow` - remove a module from the disallow list and send an update
-
-## Permissions
-- `tuffx.reload`
-- `tuffx.viablocks.command.get`
-- `tuffx.viablocks.command.refresh`
-- `tuffx.restrictions.command.disallow`
-- `tuffx.restrictions.command.allow`
+- ViaProxy plugin entrypoint (`viaproxy.yml`)
+- Automatic creation of `config.yml` in the plugin data folder on first run
 
 ## Compiling
 ```sh
-git clone https://github.com/TuffNetwork/TuffPlus.git
-cd TuffPlus
+git clone https://github.com/TuffNetwork/TuffXPlusViaProxy.git
+cd TuffXPlusViaProxy
 ./gradlew build
 ```
 
-Output jar: `build/libs/TuffXPlus-x.x.x.jar`.
+Output jar: `build/libs/TuffXPlusViaProxy-x.x.x.jar`.
 
 ## Support
 Join our Discord: https://discord.gg/G76Q3K4bWJ
