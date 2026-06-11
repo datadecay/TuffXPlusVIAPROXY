@@ -36,7 +36,7 @@ public class TuffXPlusViaProxy extends ViaProxyPlugin {
                 Files.copy(input, configPath);
             }
         } catch (IOException e) {
-            LOGGER.warning("Unable to initialize default config: " + e.getMessage());
+            LOGGER.warning("Failed to copy default config.yml to " + configPath + ": " + e.getMessage());
         }
     }
 }

@@ -21,6 +21,7 @@ repositories {
 }
 
 dependencies {
+    // ViaProxy provides plugin runtime APIs at load time.
     compileOnly('net.raphimc:ViaProxy:3.3.4') {
         transitive = false
     }
