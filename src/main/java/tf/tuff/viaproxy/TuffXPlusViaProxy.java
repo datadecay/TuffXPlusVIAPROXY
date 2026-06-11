@@ -31,7 +31,7 @@ public class TuffXPlusViaProxy extends ViaProxyPlugin {
             Files.createDirectories(dataPath);
             if (Files.exists(configPath)) return;
 
-            try (InputStream input = getClassLoader().getResourceAsStream("config.yml")) {
+            try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.yml")) {
                 if (input == null) return;
                 Files.copy(input, configPath);
             }
